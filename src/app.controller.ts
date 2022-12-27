@@ -1,12 +1,10 @@
-import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { Controller } from '@nestjs/common';
+import { Get } from "@nestjs/common/decorators";
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
-
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  home(): string{
+    return 'Welcome to my Movie API';
   }
 }
